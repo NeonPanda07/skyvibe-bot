@@ -1,0 +1,15 @@
+services:
+  - type: worker
+    name: skyvibe-bot
+    runtime: node
+    buildCommand: npm install && npm run build && npm run deploy-commands
+    startCommand: npm start
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: DISCORD_CLIENT_ID
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: NODE_ENV
+        value: production
