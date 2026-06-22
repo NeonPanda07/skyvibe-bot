@@ -1,12 +1,12 @@
 {
-  "name": "@workspace/discord-bot",
+  "name": "skyvibe-bot",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "deploy-commands": "tsx src/deploy-commands.ts",
+    "deploy-commands": "node dist/deploy-commands.js",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -18,8 +18,8 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
-    "@types/node": "catalog:",
-    "tsx": "catalog:",
+    "@types/node": "^25.3.3",
+    "tsx": "^4.21.0",
     "typescript": "~5.9.3"
   }
 }
