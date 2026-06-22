@@ -1,8 +1,8 @@
 services:
-  - type: worker
+  - type: web
     name: skyvibe-bot
     runtime: node
-    buildCommand: npm install && npm run build && npm run deploy-commands
+    buildCommand: npm install && npm run build
     startCommand: npm start
     envVars:
       - key: DISCORD_TOKEN
